@@ -1,0 +1,64 @@
+<!--date&time -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="stop()">Stop Interval</button>
+  <button onclick="stop2()">Stop Timeout</button> 
+    <script>
+        var d = new Date()
+        console.log(d);
+        console.log("date =", d.getDate());
+        console.log("day =", d.getDay());
+        console.log("month =", d.getMonth());
+        console.log("year =", d.getFullYear());
+        console.log("hour =", d.getHours());
+        console.log("minutes =", d.getMinutes());
+        console.log("seconds =", d.getSeconds());
+        console.log("miliseconds =", d.getMilliseconds());
+
+        console.log("utc date =", d.getUTCDate());
+        console.log("utc day =", d.getUTCDay());
+        console.log("utc month =", d.getUTCMonth());
+        console.log("utc year =", d.getUTCFullYear());
+        console.log("utc hours =", d.getUTCHours());
+        console.log("utc minutes =", d.getUTCMinutes());
+        console.log("utc seconds =", d.getUTCSeconds());
+        console.log("utc milliseconds =", d.getUTCMilliseconds());
+        
+
+         //timestamp
+        // var t = Date.now()
+         //console.log(t);
+        //var convertToDate = new Date(t);
+       // console.log(convertToDate);
+
+        var id1 = setTimeout(function(){
+            console.log('heloo g');
+            
+        }, 2000)
+
+        var id2 = setInterval(function(){
+            console.log('hiiii');
+            
+        }, 2000)
+        function stop(){
+            clearInterval(id2)
+        }
+
+        
+
+
+
+
+        
+
+    </script>
+
+    
+</body>
+</html>
